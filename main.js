@@ -56,7 +56,7 @@ function choosePet() {
                 gameManager.addUser(user);
 
                 console.log(`🎉 Hooray! You've adopted a furry friend! Meet ${petName}, the adorable ${species}!`);
-                console.log(`Your Current Pet status: ${JSON.stringify(myPet.status)}`);
+                console.log(`Your Current Pet status: ${JSON.stringify(myPet.getStatus())}`);
                 
                 // Start asking the user what action they want to take
                 askUserToInteract(myPet);
@@ -102,25 +102,27 @@ function askUserToInteract(myPet) {
             case '1':  // Play
                 InteractionHandler.play(myPet);
                 console.log(`${myPet.name} had a fun playtime! 🐾`);
-                console.log(`Your Current Pet status: ${JSON.stringify(myPet.status)}`);
+                console.log(`Your Current Pet status: ${JSON.stringify(myPet.getStatus())}`);
                 break;
             case '2':  // Feed
                 InteractionHandler.feed(myPet);
                 console.log(`${myPet.name} is well-fed now! 🍖`);
-                console.log(`Your Current Pet status: ${JSON.stringify(myPet.status)}`);
+                console.log(`Your Current Pet status: ${JSON.stringify(myPet.getStatus())}`);
                 break;
             case '3':  // Rest
                 InteractionHandler.rest(myPet);
                 console.log(`${myPet.name} is resting peacefully! 😴`);
-                console.log(`Your Current Pet status: ${JSON.stringify(myPet.status)}`);
+                console.log(`Your Current Pet status: ${JSON.stringify(myPet.getStatus())}`);
                 break;
             case '4':  // Cuddle
                 InteractionHandler.cuddle(myPet);
                 console.log(`${myPet.name} is enjoying a warm cuddle! 🤗`);
+                console.log(`Your Current Pet status: ${JSON.stringify(myPet.getStatus())}`);
                 break;
             case '5':  // Share Thoughts
                 InteractionHandler.shareThoughts(myPet);
                 console.log(`${myPet.name} shared some deep thoughts with you! 🧠`);
+                console.log(`Your Current Pet status: ${JSON.stringify(myPet.getStatus())}`);
                 break;
             default:
                 console.log('Invalid choice, please choose 1, 2, or 3.');
@@ -134,7 +136,7 @@ function askUserToInteract(myPet) {
                 askUserToInteract(myPet);  // Continue the interaction
             } else {
                 console.log('Thanks for playing with your pet!');
-                console.log(`Your Current Pet status: ${JSON.stringify(myPet.status)}`);
+                console.log(`Your Current Pet status: ${JSON.stringify(myPet.getStatus())}`);
                 rl.close();  // End the interaction
             }
         });
