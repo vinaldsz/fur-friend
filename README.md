@@ -111,7 +111,8 @@ Pet class delegates status management behavior to a separate PetStatus class (th
 Good Example:
 The GameManager ensures that only one instance of the game exists, managing users and pets efficiently.
 
-``` export class GameManager {
+``` 
+export class GameManager {
     static instance;
 
     constructor() {
@@ -130,13 +131,13 @@ The GameManager ensures that only one instance of the game exists, managing user
 // Usage
 const game1 = new GameManager();
 const game2 = new GameManager();
-console.log(game1 === game2); // true (Same instance)
-```
+console.log(game1 === game2); // true (Same instance) ```
 
 Bad Example: (Breaking Singleton)
 Here, multiple instances of GameManager can be created, leading to inconsistent game state.
 
-``` export class GameManager {
+``` 
+export class GameManager {
     constructor() {
         this.users = [];
     }
@@ -149,15 +150,15 @@ Here, multiple instances of GameManager can be created, leading to inconsistent 
 // Usage
 const game1 = new GameManager();
 const game2 = new GameManager();
-console.log(game1 === game2); // false (Different instances)
-```
+console.log(game1 === game2); // false (Different instances)```
 
 2. Factory Pattern
 
 Good Example:
 The PetFactory creates pets dynamically based on the species provided, ensuring flexibility and scalability.
 
-``` import { Dog } from "./Dog.js"; 
+``` 
+import { Dog } from "./Dog.js"; 
 import { Cat } from "./Cat.js";
 import { Rabbit } from "./Rabbit.js";
 
@@ -206,7 +207,8 @@ The issue here is the if-else chain, making it harder to maintain and extend whe
 Good Example:
 The PetStatus class allows different ways to update the pet’s status, keeping Pet flexible and avoiding hardcoded logic.
 
-```export class PetStatus {
+```
+export class PetStatus {
     constructor() {
         this.status = { hunger: 100, happiness: 100 };
     }
@@ -224,7 +226,8 @@ The PetStatus class allows different ways to update the pet’s status, keeping 
 Bad Example: (Without Strategy Pattern)
 Here, Pet directly manages its status, making it harder to change status logic in the future.
 
-``` export class Pet {
+``` 
+export class Pet {
     constructor(name, species) {
         this.name = name;
         this.species = species;
