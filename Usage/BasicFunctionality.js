@@ -12,10 +12,10 @@ gameManager.addUser(user);
 
 // Basic interaction cycle
 InteractionHandler.play(pet);
-console.log(`${pet.name}'s happiness: ${pet.status.happiness}`);
+console.log(`${pet.name}'s happiness: ${pet.getStatus().happiness}`);
 
 InteractionHandler.feed(pet);
-console.log(`${pet.name}'s hunger: ${pet.status.hunger}`);
+console.log(`${pet.name}'s hunger: ${pet.getStatus().hunger}`);
 
 InteractionHandler.rest(pet);
-console.log(`${pet.name}'s energy: ${pet.status.energy}`);
+console.log(`${pet.name}'s energy: ${pet.getStatus().energy}`);

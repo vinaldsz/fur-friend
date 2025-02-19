@@ -27,7 +27,7 @@ async function simulatePetDay(pet) {
                 break;
         }
         
-        console.log(`Status after ${activity}:`, pet.status);
+        console.log(`Status after ${activity}:`, pet.getStatus());
     }
 }
 

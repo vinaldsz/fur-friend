@@ -11,13 +11,13 @@ export class Pet {
      * @param {string} name - The name of the pet.
      * @param {string} species - The species of the pet.
      */
-    constructor(name, species) {
+    constructor(name, species, StatusManager) {
       if (!PetSpecies.isValidSpecies(species)) {
             throw new Error('Invalid species');
         }
       this.name = name;
       this.#species = species;
-      this.#status = new PetStatus();
+      this.#status = StatusManager;
     }
 
     // Private properties (Encapsulation)
@@ -34,6 +34,9 @@ export class Pet {
 
     updateStatus(activity) {
       this.#status.updateStatus(activity);
-  }
-
+    }
+    // Polymorphic method
+    makeSound() {
+      return `${this.name} makes a generic pet sound.`;
+    }
   }
