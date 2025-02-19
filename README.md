@@ -246,3 +246,21 @@ export class Pet {
 ```
 
 By tightly coupling the `Pet` class with status management, any future updates to the status logic would require modifying the `Pet` class, violating the Open-Closed Principle.
+
+
+## AI Usage
+
+### For Documentation
+
+Documentation section - Fur Friend.pdf includes AI prompts used.
+
+### For Code Development
+
+1. Copilot - creating JsDoc comments for the code.
+
+2. Chatgpt 4 
+
+Prompt : Modify this to a proper Readme file with code blocks in markdown format <README.md>
+Result : Successful
+Response : Here's your README file formatted properly in Markdown with appropriate code blocks. Let me know if you'd like any refinements! Your README file has been added with proper formatting, OOP principles, SOLID principles, and design patterns. Let me know if you need any modifications! 🚀
+
