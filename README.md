@@ -112,6 +112,7 @@ Good Example:
 The GameManager ensures that only one instance of the game exists, managing users and pets efficiently.
 
 ``` 
+
 export class GameManager {
     static instance;
 
@@ -137,6 +138,7 @@ Bad Example: (Breaking Singleton)
 Here, multiple instances of GameManager can be created, leading to inconsistent game state.
 
 ``` 
+
 export class GameManager {
     constructor() {
         this.users = [];
@@ -158,6 +160,7 @@ Good Example:
 The PetFactory creates pets dynamically based on the species provided, ensuring flexibility and scalability.
 
 ``` 
+
 import { Dog } from "./Dog.js"; 
 import { Cat } from "./Cat.js";
 import { Rabbit } from "./Rabbit.js";
@@ -181,6 +184,7 @@ Bad Example: (Without Factory)
 If each pet were created manually, it would lead to code duplication and make it harder to add new species.
 
 ```
+
 import { Dog } from "./Dog.js";
 import { Cat } from "./Cat.js";
 import { Rabbit } from "./Rabbit.js";
@@ -208,6 +212,7 @@ Good Example:
 The PetStatus class allows different ways to update the pet’s status, keeping Pet flexible and avoiding hardcoded logic.
 
 ```
+
 export class PetStatus {
     constructor() {
         this.status = { hunger: 100, happiness: 100 };
@@ -227,6 +232,7 @@ Bad Example: (Without Strategy Pattern)
 Here, Pet directly manages its status, making it harder to change status logic in the future.
 
 ``` 
+
 export class Pet {
     constructor(name, species) {
         this.name = name;
