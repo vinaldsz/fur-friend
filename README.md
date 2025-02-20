@@ -264,3 +264,11 @@ Prompt : Modify this to a proper Readme file with code blocks in markdown format
 Result : Successful
 Response : Here's your README file formatted properly in Markdown with appropriate code blocks. Let me know if you'd like any refinements! Your README file has been added with proper formatting, OOP principles, SOLID principles, and design patterns. Let me know if you need any modifications! 🚀
 
+## YouTube Video
+https://youtu.be/uCO_UKXUNfI
+
+## UML Diagram
+https://lucid.app/lucidchart/986b1916-c8a1-48b2-94f7-92d9ac286895/edit?viewport_loc=-1409%2C-640%2C4300%2C2479%2CB_9ROwEE.EMD&invitationId=inv_94ccbac7-0985-4f42-a454-9470babb9887
+
+## Figma
+https://www.figma.com/design/D8Vtpd6MeMywRNxiqCkopm/Fur-Friend?node-id=0-1&m=dev&t=TZij03BaXegaUx5X-1
